@@ -1,7 +1,7 @@
 DAMN CMS - Django (restful) Api using MongoDB and Nginx
 =======================================================
 
-There are almost no projects without demand for a backend provide and manage data.
+There are almost no projects without demand for a backend to provide and manage data.
 Often this backend is only providing collections of simple data models.
 
 Specially if you have to deal with Mobile application or web projects an easy to setup backend can save a life.
