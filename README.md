@@ -55,19 +55,19 @@ Next activate the environment:
     $ . /bin/activate
 	(damn-cms)$
 	
-run the pip installer to install required packages:
+Download REQUIREMENTS.txt and run the pip installer to install required packages:
 
-	(damn-cms)$ pip install -r PROJECT_ROOT/REQUIREMENTS.txt
+	(damn-cms)$ pip install -r REQUIREMENTS.txt
 	...
 	Successfully installed pymongo Django djangotoolbox django-mongodb-engine permission-backend-nonrel tastypie mimeparse python-dateutil lxml PyYAML biplist path
 	Cleaning up...
 	(damn-cms)$
 	
-clone the damn-cms into PROJECT_ROOT:
+clone the damn-cms into PROJECT_ROOT or any other directory inside your env:
     
-    (damn-cms)$ git clone https://github.com/..... PROJECT_ROOT
+    (damn-cms)$ git clone git://github.com/endyman/damn-cms.git PROJECT_ROOT
 	
-alternatively un-tar dman-cms into PROJECT_ROOT:
+alternatively un-tar a damn-cms copy into PROJECT_ROOT:
 
     (damn-cms)$ mkdir PROJECT_ROOT && cd PROJECT_ROOT
     (damn-cms)$ tar -xvzf damn-cms.tar.gz
