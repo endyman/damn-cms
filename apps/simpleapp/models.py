@@ -14,7 +14,6 @@ logger = logging.getLogger('apps')
 class ProductType(models.Model):
 	name = models.CharField(max_length=100)
 	order = models.IntegerField(unique=True, default=0)
-
 	def save(self, *args, **kwargs):
 		# autogenerate order id if none is provided
 		if self.order == 0:
