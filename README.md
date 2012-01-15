@@ -10,7 +10,7 @@ The idea of damn cms is to provide you with a sample implementation of all the b
 Everything was already there but it took quite a while to make all the components play nice.
 
 The Core of the CMS is Django-nonrel - a django fork supporting non-relational databases.
-MongoDB is used as a database using the Django MongoDB Engine backend. MongoDB is solid NoSQL Database with lots of useful feature like GridFS, Geo Indexes and Map Reduce. The key feature of MongoDB is GridFS here as it can be used as the Django Storage Engine, too. By using GridFS we have a scalable HighPerfomant Distributed Filesystem to store our binary data without the need to care about replication across multiple instances. While we can also build Websites with this setup the main focus is an API so I decided to go with Tastypie after evaluation various options. With Tastypie you can easily expose your models by building REST Resources. Tastypie already includes Serializers for JSON, XML and Binary Plist out of the box.
+MongoDB is used as a database using the Django MongoDB Engine backend. MongoDB is solid NoSQL Database with lots of useful feature like GridFS, Geo Indexes and Map Reduce. The key feature of MongoDB is GridFS here as it can be used as the Django Storage Engine, too. By using GridFS we have a scalable HighPerfomant Distributed Filesystem to store our binary data without the need to care about replication across multiple instances. While we can also build Websites with this setup the main focus is an API so I decided to go with Tastypie after evaluating various options. With Tastypie you can easily expose your models by building REST Resources. Tastypie already includes Serializers for JSON, XML and Binary Plist out of the box.
 
 With this software stack we have:
 
