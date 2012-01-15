@@ -29,7 +29,8 @@ For production I already included configs for uWSGI and NginX as well as for the
 Pre-requisits
 -------------
 
-**OSX:**
+**OSX:**  
+
 [Mercurial 2.0.2 for OS X 10.7](http://mercurial.berkwood.com/binaries/Mercurial-2.0.2-py2.7-macosx10.7.zip)
 
 [git-1.7.8.3-intel-universal-snow-leopard.dmg](http://code.google.com/p/git-osx-installer/downloads/detail?name=git-1.7.8.3-intel-universal-snow-leopard.dmg&can=3&q=)
