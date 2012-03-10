@@ -2,12 +2,22 @@ import copy
 
 from tastypie import fields
 from tastypie.resources import ModelResource
+from tastypie.api import Api
 
 #internal imports
 from extensions.tastypie.authentication import CustomApiKeyAuthentication
 from extensions.tastypie.authorization import CustomDjangoAuthorization
 
 from simpleapp.models import ProductType, Product
+
+def get_api():
+	# create the naespaces for the applications
+	api = Api(api_name='simpleapp')
+	api.register(TypeResource())
+	api.register(ProductResource())
+	
+	base_path_regex = r'^api/v1/'
+	return base_path_regex,api
 
 class TypeResource(ModelResource):
 	products = fields.ToManyField('simpleapp.api.ProductResource', 'products', full=False)
