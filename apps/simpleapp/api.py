@@ -12,12 +12,16 @@ from simpleapp.models import ProductType, Product
 
 def get_api():
 	# create the naespaces for the applications
-	api = Api(api_name='simpleapp')
-	api.register(TypeResource())
-	api.register(ProductResource())
-	
-	base_path_regex = r'^api/v1/'
-	return base_path_regex,api
+	apis = {}
+	apis['v1'] = Api(api_name='v1')
+	apis['v1'].register(TypeResource())
+	apis['v1'].register(ProductResource())
+
+	# sample alternative version of this api to illustrate how to hook in new versions
+	apis['v2'] = Api(api_name='v2')
+	apis['v2'].register(TypeResource())
+	apis['v2'].register(ProductResource())
+	return apis
 
 class TypeResource(ModelResource):
 	products = fields.ToManyField('simpleapp.api.ProductResource', 'products', full=False)

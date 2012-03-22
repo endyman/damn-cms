@@ -22,6 +22,7 @@ for app_name in os.listdir(APP_DIRS):
 			api_module = __import__(import_string, globals(), locals(), [])
 			app_obj = getattr(api_module,app_name)
 			app_url_config = app_obj.api.get_api()
-			urlpatterns += patterns("", url(app_url_config[0], include(app_url_config[1].urls)))
+			for key in app_url_configs:
+				urlpatterns += patterns("", url(r'^%s/api/' % app_name, include(app_url_configs[key].urls)))
 	except Exception, e:
 		logger.debug("couldn't import %s %s %s", app_name, Exception, e)
