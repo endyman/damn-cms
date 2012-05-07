@@ -55,13 +55,6 @@ Next activate the environment:
     $ . /bin/activate
 	(damn-cms)$
 	
-Download REQUIREMENTS.txt and run the pip installer to install required packages:
-
-	(damn-cms)$ pip install -r REQUIREMENTS.txt
-	...
-	Successfully installed pymongo Django djangotoolbox django-mongodb-engine permission-backend-nonrel tastypie mimeparse python-dateutil lxml PyYAML biplist path
-	Cleaning up...
-	(damn-cms)$
 	
 clone the damn-cms into PROJECT_ROOT or any other directory inside your env:
     
@@ -72,6 +65,14 @@ alternatively un-tar a damn-cms copy into PROJECT_ROOT:
     (damn-cms)$ mkdir PROJECT_ROOT && cd PROJECT_ROOT
     (damn-cms)$ tar -xvzf damn-cms.tar.gz
 
+Run the pip installer to install required packages:
+
+	(damn-cms)$ pip install -r PROJECT_ROOT/REQUIREMENTS.txt
+	...
+	Successfully installed pymongo Django djangotoolbox django-mongodb-engine permission-backend-nonrel tastypie mimeparse python-dateutil lxml PyYAML biplist path
+	Cleaning up...
+	(damn-cms)$
+		
 Starting in development mode:
 -----------------------------
 
