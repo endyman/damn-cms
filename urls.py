@@ -21,7 +21,7 @@ for app_name in os.listdir(APP_DIRS):
 			import_string = "apps.%s.api" % (app_name)
 			api_module = __import__(import_string, globals(), locals(), [])
 			app_obj = getattr(api_module,app_name)
-			app_url_config = app_obj.api.get_api()
+			app_url_configs = app_obj.api.get_api()
 			for key in app_url_configs:
 				urlpatterns += patterns("", url(r'^%s/api/' % app_name, include(app_url_configs[key].urls)))
 	except Exception, e:
