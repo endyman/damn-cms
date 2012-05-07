@@ -84,6 +84,17 @@ Starting in development mode:
 
 	(damn-cms)$ cd PROJECT_ROOT && ./manage.py syncdb
 	
+if this fails with ImportError: No module named objectid, you have to manually fix the import in 
+	src/django-mongodb-engine/django_mongodb_engine/fields.py. change the line 
+	
+	from pymongo.objectid import ObjectId
+
+into
+
+	from bson.objectid import ObjectId
+
+I already sent a pull request to django-nonrel to address this issue.
+	
 **Collect static files (required for django admin):**
 
 	(damn-cms)PROJECT_ROOT$ ./manage.py collectstatic
